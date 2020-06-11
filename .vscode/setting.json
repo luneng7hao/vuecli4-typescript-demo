@@ -1,0 +1,152 @@
+{
+    "[json]": {},
+    "workbench.sideBar.location": "left",
+    "editor.wordWrap": "on", // 控制折行方式。可以选择： - “off” （禁用折行）， - “on” （视区折行）， - “wordWrapColumn”（在“editor.wordWrapColumn”处折行）或 - “bounded”（在视区与“editor.wordWrapColumn”两者的较小者处折行）。
+    "editor.fontSize": 17,
+    "eslint.autoFixOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    // ===========以下4个是控制保存时自动格式化的，并且以4格缩进================
+    "editor.tabCompletion": "on",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4, //vscode设置的缩进量
+    "editor.formatOnSave": true, //保存时候自动格式化
+    // ===========以下是根据自己需求配置的============================
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true, //  #让函数(名)和后面的括号之间加个空格
+    "git.confirmSync": true, // *** 这个是提示空格的点点
+    // "stylusSupremacy.insertColons": false, // 是否插入冒号
+    // "stylusSupremacy.insertSemicolons": false, // 是否插入分好
+    // "stylusSupremacy.insertBraces": false, // 是否插入大括号
+    // "stylusSupremacy.insertNewLineAroundImports": false, // import之后是否换行
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "html",
+            "autoFix": true
+        }
+    ], // 添加 vue 支持
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "editor.formatOnType": true // 两个选择器中是否换行
+    "vetur.format.defaultFormatter.js": "vscode-typescript", //让vue中的js按编辑器自带的ts格式进行格式化
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            "semi": false
+        },
+        "js-beautify-html": {
+            "wrap_attributes": "auto"
+            // #vue组件中html代码格式化样式
+            // - auto: 仅在超出行长度时才对属性进行换行。
+            // - force: 对除第一个属性外的其他每个属性进行换行。
+            // - force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐。
+            // - force-expand-multiline: 对每个属性进行换行。
+            // - aligned-multiple: 当超出折行长度时，将属性进行垂直对齐。
+        }
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true
+    },
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html",
+        "javascript": "javascriptreact",
+        "wxml": "html"
+    },
+    // "editor.fontFamily": "'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'", //  这个是控制字体样式的
+    "files.associations": {
+        "*.html": "html",
+        "*.js": "javascriptreact",
+        "*.vue": "vue",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "*.ts": "typescriptreact"
+    },
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (Eex)"
+    ],
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".vue"
+        ]
+    },
+  //   "git.path":""
+    // "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+    // ====================================================================
+    // "fileheader.LastModifiedBy": "Oralinge",
+    // "fileheader.Author": "Oralinge",
+    // "git.autofetch": true,
+    // "[html]": {
+    //     "editor.defaultFormatter": "HookyQR.beautify"
+    // },
+    // "editor.detectIndentation": false,
+    // "editor.formatOnSave": true,
+    // "editor.formatOnPaste": true,
+    // "prettier.eslintIntegration": true,
+  
+    //  #去掉代码结尾的分号
+    "prettier.semi": true,
+    //  #使用带引号替代双引号
+    "prettier.singleQuote": true,
+  
+    // #这个按用户自身习惯选择
+    // "vetur.format.defaultFormatter.html": "js-beautify-html",
+    // =====================================
+    "workbench.iconTheme": "vscode-icons",
+    // "emmet.triggerExpansionOnTab": true,
+    // "tslint.autoFixOnSave": true,
+    // "prettier.semi": false, //去掉代码结尾的分号
+    // "prettier.singleQuote": true, // 强制单引号
+    // "vetur.format.defaultFormatterOptions": {
+    //   "js-beautify-html": {
+    //     "wrap_attributes": "force-aligned" // 属性强制折行对齐
+    //   }
+    // },
+    // "javascript.implicitProjectConfig.experimentalDecorators": true,
+    // "[markdown]": {
+    //   "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    // },
+    // //下面的这些配置一定要留着，很好用
+    // "emmet.syntaxProfiles": {
+    //   "javascript": "jsx",
+    //   "vue": "html",
+    //   "vue-html": "html"
+    // },
+    // // "editor.cursorBlinking": "smooth",
+    // "editor.minimap.enabled": true,
+    // "editor.minimap.renderCharacters": false,
+    // "editor.codeLens": true,
+    // "window.zoomLevel": 0,
+  }
