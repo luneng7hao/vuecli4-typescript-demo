@@ -63,7 +63,7 @@ module.exports = {
   pwa: {},
   // webpack-dev-server 相关配置
   devServer: {
-    open: process.platform === 'darwin',
+    open: false,
     host: 'localhost',
     port: 3001, //8080,
     https: false,
