@@ -1,19 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <van-row gutter="20">
+      <van-col class="item" span="8">span: 8</van-col>
+      <van-col class="item" span="8">span: 8</van-col>
+      <van-col class="item" span="8">span: 8</van-col>
+    </van-row>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { Col as VanCol, Row as VanRow } from 'vant'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    VanCol,
+    VanRow
   },
   methods: {}
 }
 </script>
+<style lang="scss" scoped>
+.item {
+  background: blue;
+}
+</style>
