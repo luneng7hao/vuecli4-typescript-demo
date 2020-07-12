@@ -1,16 +1,16 @@
 <template>
   <div>
     <van-row class="container">
-      <van-cell title="股东高管" value="股东20/高管8" is-link />
+      <van-cell title="股东高管" value="股东20/高管8" is-link/>
       <grid :gutter="5" :column-num="3">
         <grid-item v-for="item in managers" :key="item.id">
           <van-row class="item" type="flex" gutter="10">
-            <van-col class="tag-col"
-              ><tag :type="item.type"> {{ returnTag(item.name) }}</tag></van-col
-            >
-            <van-col
-              ><span class="name">{{ item.name }}</span></van-col
-            >
+            <van-col class="tag-col">
+              <tag :type="item.type">{{ returnTag(item.name) }}</tag>
+            </van-col>
+            <van-col>
+              <span class="name">{{ item.name }}</span>
+            </van-col>
           </van-row>
           <van-row class="item">{{ item.scale }}</van-row>
           <van-row class="item">{{ item.relation }}</van-row>
@@ -27,17 +27,17 @@ import {
   Cell as VanCell,
   Grid,
   GridItem,
-  Tag
+  Tag,
 } from 'vant'
 export default {
-  name: 'Home',
+  // name: 'Home',
   components: {
     VanCol,
     VanRow,
     VanCell,
     Grid,
     GridItem,
-    Tag
+    Tag,
   },
   data() {
     return {
@@ -47,23 +47,23 @@ export default {
           name: '贾跃亭',
           type: 'primary',
           scale: '持股比例23.07',
-          relation: '关联企业14家'
+          relation: '关联企业14家',
         },
         {
           id: '2',
           name: '天津嘉瑞',
           type: 'success',
           scale: '持股比例8.56',
-          relation: '关联企业3家'
+          relation: '关联企业3家',
         },
         {
           id: '3',
           name: '刘弘',
           type: 'danger',
           scale: '持股比例2.12',
-          relation: '关联企业6家'
-        }
-      ]
+          relation: '关联企业6家',
+        },
+      ],
     }
   },
   methods: {
@@ -72,8 +72,8 @@ export default {
         return '#'
       }
       return name.substring(0, 1)
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>

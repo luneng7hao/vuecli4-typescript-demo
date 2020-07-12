@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <base-info> </base-info>
+    <base-info></base-info>
     <van-row class="line"></van-row>
     <managers></managers>
   </div>
@@ -15,9 +15,9 @@ export default {
   components: {
     BaseInfo,
     VanRow,
-    Managers
+    Managers,
   },
-  methods: {}
+  methods: {},
 }
 </script>
 <style lang="scss" scoped>
