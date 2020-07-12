@@ -1,7 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 const sourceMap = process.env.NODE_ENV === 'development'
-
+function resolve(dir) {
+    return path.join(__dirname, dir)
+}
 module.exports = {
     // 基本路径
     publicPath: './',
@@ -15,6 +17,7 @@ module.exports = {
         return config
     },
     configureWebpack: config => {
+        config.resolve.alias['@'] = resolve('src')
         if (process.env.NODE_ENV === 'production') {
             // 为生产环境修改配置...
             config.mode = 'production'
