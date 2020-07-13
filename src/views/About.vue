@@ -1,12 +1,6 @@
 <template>
   <div class="about">
-    <div class="search-num">
-      <van-field readonly clickable :value="value" @touchstart.native.stop="show = true"/>
-      <van-number-keyboard v-model="value" :show="show" :maxlength="6" @blur="show = false"/>
-    </div>
-    <div class="search">
-      <van-field :value="searchValue" label="文本"/>
-    </div>
+    <!-- <i class="iconfont icon--search"></i> -->
   </div>
 </template>
 
