@@ -72,6 +72,9 @@ export default {
     handleDel() {
       this.$router.go(-1)
     },
+    handleRoute(name) {
+      this.$router.push(name)
+    },
   },
 }
 </script>
