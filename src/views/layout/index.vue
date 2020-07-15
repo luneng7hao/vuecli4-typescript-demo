@@ -25,11 +25,14 @@ export default {
 
 <style lang='scss' scoped>
 .layout {
+  overflow: auto;
+  margin-bottom: 90px;
   .bottom {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 999;
   }
 }
 </style>
