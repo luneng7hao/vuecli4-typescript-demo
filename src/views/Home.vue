@@ -17,7 +17,30 @@ export default {
     VanRow,
     Managers
   },
-  methods: {}
+  created() {
+    this.initData()
+  },
+  methods: {
+    initData() {
+      const str = 'asdfasasasafasaaa'
+      const strArr = str.split()
+      const setArr = [...new Set(str)]
+
+      const strObj = {}
+      let max = 0
+      let maxChar = ''
+      let number = 0
+      setArr.forEach(element => {
+        number = str.split(element).length - 1
+        console.log(number, str.split(element))
+        if (number > max) {
+          max = number
+          maxChar = element
+        }
+      })
+      console.log(setArr)
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
